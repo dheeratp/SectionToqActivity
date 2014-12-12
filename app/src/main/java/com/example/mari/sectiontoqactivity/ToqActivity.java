@@ -113,29 +113,28 @@ public class ToqActivity extends Activity {
             }
         });
 
-//        findViewById(R.id.filter_notification).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                filterNotifications();
-//                //addSimpleTextCard();
-//            }
-//        });
+        findViewById(R.id.filter_notification).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterNotifications();
+            }
+        });
 
-//        findViewById(R.id.remove_button).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                removeDeckOfCards();
-//            }
-//        });
+        findViewById(R.id.remove_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                removeDeckOfCards();
+            }
+        });
     }
 
     private void sendNotification() {
         String[] message = new String[2];
-        message[0] = "Jeans 20% Off";
-        message[1] = "See coupon inside SaleCell watch app";
+        message[0] = "Message 1";
+        message[1] = "Message 2";
         // Create a NotificationTextCard
         NotificationTextCard notificationCard = new NotificationTextCard(System.currentTimeMillis(),
-                "Sale Cell", message);
+                "Notification Title", message);
 
         // Draw divider between lines of text
         notificationCard.setShowDivider(true);
@@ -284,7 +283,6 @@ public class ToqActivity extends Activity {
             return;
         }
 
-        System.out.println("################# mRemoteDeckOfCards ="+mRemoteDeckOfCards);
         // Try to retrieve a stored deck of cards
         try {
             // If there is no stored deck of cards or it is unusable, then create new and store
@@ -292,7 +290,6 @@ public class ToqActivity extends Activity {
                 mRemoteDeckOfCards = createDeckOfCards();
                 storeDeckOfCards();
             }
-            System.out.println("$$$$$$$$$$$$$$$$$$ mRemoteDeckOfCards = "+mRemoteDeckOfCards);
         }
         catch (Throwable th){
             th.printStackTrace();
@@ -348,7 +345,6 @@ public class ToqActivity extends Activity {
             return null;
         }
         else{
-            System.out.println("In getStoredDeckOfCards() "+ParcelableUtil.unmarshall(deckOfCardsStr, RemoteDeckOfCards.CREATOR));
             return ParcelableUtil.unmarshall(deckOfCardsStr, RemoteDeckOfCards.CREATOR);
         }
 
@@ -397,9 +393,8 @@ public class ToqActivity extends Activity {
 
     /* Show filter notifications screens*/
     private void filterNotifications() {
-//        Intent intent = new Intent(getApplicationContext(), merchant.class);
-//        startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), merchant.class);
+        startActivity(intent);
     }
-
 
 }

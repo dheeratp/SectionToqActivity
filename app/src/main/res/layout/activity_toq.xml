@@ -31,7 +31,6 @@
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
-
     <Button
         android:id="@+id/send_notif_button"
         android:layout_width="wrap_content"
@@ -41,18 +40,26 @@
     />
 
     <!--<Button-->
-        <!--android:id="@+id/filter_notification"-->
+        <!--android:id="@+id/add_button"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--android:text="Filter Notification"-->
+        <!--android:text="Add SimpleTextCard"-->
         <!--android:layout_gravity="center_horizontal"-->
     <!--/>-->
 
-    <!--<Button-->
-        <!--android:id="@+id/remove_button"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Remove 1st SimpleTextCard"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--/>-->
+    <Button
+        android:id="@+id/filter_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter Notification"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove 1st SimpleTextCard"
+        android:layout_gravity="center_horizontal"
+        />
 </LinearLayout>
